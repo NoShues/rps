@@ -6,5 +6,14 @@ function getComputerChoice(max){
     return Math.floor(Math.random() * max);
 
 }
+
+if (getComputerChoice(3) == 0) {
+    choice = "Rock";
+} else if (getComputerChoice(3) == 1){
+    choice = "Paper";
+}
+else {
+    choice = "Scissors";
+}
     // check if getComputerChoice function is working in console
-    console.log(getComputerChoice(3));//success
+    console.log(choice);//success
