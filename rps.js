@@ -1,5 +1,5 @@
 // Test that "rps.js" file is linked to "index.html" file.
-console.log('Hello World!'); //success: printed to console
+console.log('Hello World!'); //success
 
 // logic to get the computer choice of a random number between 0 an 3
 function getComputerChoice(max){
@@ -8,12 +8,19 @@ function getComputerChoice(max){
 }
 
 if (getComputerChoice(3) == 0) {
-    choice = "Rock";
+    computerChoice = "Rock";
 } else if (getComputerChoice(3) == 1){
-    choice = "Paper";
+    computerChoice = "Paper";
 }
 else {
-    choice = "Scissors";
+    computerChoice = "Scissors";
 }
     // check if getComputerChoice function is working in console
-    console.log(choice);//success
+    console.log('Computer Choice: ' + computerChoice); //success
+
+// logic to get the human choice of a random number between 0 an 3
+function getHumanChoice(){
+    return String(prompt("Enter: Rock, Paper or Scissors"));
+}
+    // check if getHumanChoice function is working in console
+console.log('Human Choice: ' + getHumanChoice()); //success
