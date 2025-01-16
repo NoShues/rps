@@ -7,6 +7,17 @@
 // Test that your function returns what you expect using console.log or the browser developer tools before advancing to the next step.
 
 // *****************************************************************************************************//
+    // SEQUENCE computer choice
+        // COMPUTE a random number between 0 and 2 to be the computer choice
+            // SET computer choice
+                // IF-THEN-ELSE
+                    // IF computer choice is equal to 0
+                        // THEN Display: 'Rock'
+                    // IF computer choice is equal to 1
+                        // THEN Display: 'Paper'
+                    // ELSE 
+                        // Display: 'Scissors'
+// *****************************************************************************************************//
 
 // Write the logic to get the human choice
 // Your game will be played by a human player. You will write a function that takes the user choice and returns it.
@@ -16,12 +27,33 @@
 // Test what your function returns by using console.log.
 
 // *****************************************************************************************************//
+    // SEQUENCE human choice
+        // GET human choice
+            // SET human choice to capitalize first letter ONLY
+                // DETERMINE if the human choice is a valid choice
+                    // IF-THEN-ELSE
+                        // IF human choice is equal to 'Rock'
+                            // THEN Display: 'Rock'
+                        // IF human choice is equal to 'Paper' 
+                            // THEN Display: 'Paper'
+                        // IF human choice is equal to 'Scissors'
+                            // THEN Display: 'Scissors'
+                        // ELSE
+                            // Display: 'Please choose '"Rock", "Paper" or "Scissors"'
+                            // GET new human choice
+// *****************************************************************************************************//
 
 // Declare the players score variables
 // Your game will keep track of the players score. You will write variables to keep track of the players score.
 // Create two new variables named humanScore and computerScore in the global scope.
 // Initialize those variables with the value of 0.
 
+// *****************************************************************************************************//
+    // SEQUENCE declare scores
+        // SET human score
+            // INIT human score to a value of 0
+        // SET computer score
+            // INIT computer score to a value of 0
 // *****************************************************************************************************//
 
 // Write the logic to play a single round
@@ -33,6 +65,31 @@
 // Increment the humanScore or computerScore variable based on the round winner.
 
 // *****************************************************************************************************//
+    // SEQUENCE play round
+        // GET human choice and computer choice
+            // IF human choice is equal to computer choice
+                // THEN Display: 'It's a Draw!'
+            // IF human choice is equal to 'Rock' and computer choice is equal to 'Scissors'
+                // THEN Display: 'You win! Rock beats Paper'
+                // INCREMENT human score by 1
+            // IF human choice is equal to 'Paper' and computer choice is equal to 'Rock'
+                // THEN Display: 'You Win! Paper beats Rock'
+                // INCREMENT human score by 1
+            // IF human choice equals 'Scissors' and computer choice equals 'Paper'
+                // THEN Display: 'You win! Scissors beats paper'
+                // INCREMENT human score by 1
+            // IF human choice equals 'Rock' and computer choice equals 'Paper'
+                // THEN Display: 'You lose! Paper beats Rock'
+                // INCREMENT computer score by 1
+            // IF human choice equals 'Paper' and computer choice equals 'Scissors'
+                // THEN Display: 'You lose! Scissors beats Paper'
+                // INCREMENT computer score by 1
+            // IF human choice equals 'Scissors' and computer choice equals 'Rock'
+                // THEN Display: 'You lose! Rock beats Paper'
+                // INCREMENT computer score by 1
+            // ELSE
+                // Display: 'Oh, oh! Looks like something went wrong'
+// *****************************************************************************************************//
 
 // Write the logic to play the entire game
 // Your game will play 5 rounds. You will write a function named playGame that calls playRound to play 5 rounds, keeps track of the scores and declares a winner at the end.
@@ -42,3 +99,17 @@
 // Hint: When you assign a function call to a variable, the return value of that function is assigned to the variable. Accessing the variable afterward will only provide the assigned value; it doesn’t recall the function. You need to recall the choice functions to get new choices for each round.
 // Re-work your previous functions or create more helper functions if necessary. Specifically, you may want to change the return values to something more useful.
 // If you already know about loops, you can use them. If not, don’t worry! Loops will be covered in the next lesson.
+
+// *****************************************************************************************************//
+    // SEQUENCE play game
+        // CALL play round 5 times
+            // IF human score is greater than computer score
+                // THEN Display: 'Congratulations: YOU WIN!'
+            // IF human score is less than computer score
+                // THEN Display: 'Better luck next time: YOU LOSE'
+            // IF human score is equal to computer score
+                // THEN Display: 'Unbelievable! It was a draw!'
+            // ELSE
+                // Display: 'Uh, oh! Something went wrong'
+
+// *****************************************************************************************************//
