@@ -9,7 +9,7 @@
                     // ELSE 
                         // Display: 'Scissors'
 // *****************************************************************************************************//
-function getComputerCoice(max){
+function getComputerChoice(max){
     let computerChoice = Math.floor(Math.random() * max);
     if (computerChoice == 0){
         computerChoice = 'Rock';
@@ -19,7 +19,7 @@ function getComputerCoice(max){
         computerChoice = 'Scissors';
         return computerChoice
 }
-console.log('getComputerChoice fx: ' + getComputerCoice(3));
+console.log('getComputerChoice fx: ' + getComputerChoice(3));
 // *****************************************************************************************************//
     // SEQUENCE human choice
         // GET human choice
@@ -35,6 +35,21 @@ console.log('getComputerChoice fx: ' + getComputerCoice(3));
                         // ELSE
                             // Display: 'Please choose '"Rock", "Paper" or "Scissors"'
                             // GET new human choice
+// *****************************************************************************************************//
+function getHumanChoice(){
+    const userValue = (prompt('Enter: "Rock", "Paper" or "Scissors"'));
+    let humanChoice = userValue.toUpperCase().charAt(0) + userValue.toLowerCase().slice(1,8);
+    if (humanChoice == 'Rock'){
+        humanChoice = 'Rock'
+    } else if (humanChoice == 'Paper'){
+        humanChoice = 'Paper'
+    } else if(humanChoice == 'Scissors'){
+        humanChoice = 'Scissors'
+    } else
+        humanChoice = alert(`No ${userValue}'s allowed!`) + getHumanChoice(); 
+    return String(humanChoice)
+}
+console.log('getHumanChoice fx: ' + getHumanChoice());
 // *****************************************************************************************************//
     // SEQUENCE declare scores
         // SET human score
