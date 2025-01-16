@@ -54,8 +54,8 @@ function playRound(humanChoice, computerChoice) {
   <br>
 }
 <br>
-const humanSelection = getHumanChoice();
-<p>const computerSelection = getComputerChoice();</p>
+<p>const humanSelection = getHumanChoice();</p>
+const computerSelection = getComputerChoice();
 
 <p>playRound(humanSelection, computerSelection);</p>
 
