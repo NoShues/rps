@@ -15,13 +15,13 @@ It’s best practice to link to an external JavaScript file inside this script t
 You don’t have to write additional code in the HTML file. This game is played entirely via the console.
 
 <h2>Step 2: Write the logic to get the computer choice</h2>
-Your game will be played against the computer. You will write a function that randomly returns “rock”, “paper” or “scissors”.
+<p>Your game will be played against the computer. You will write a function that randomly returns “rock”, “paper” or “scissors”.</p>
 
-Create a new function named getComputerChoice.
-Write the code so that getComputerChoice will randomly return one of the following string values: “rock”, “paper” or “scissors”.
-Hint: The Math.random method returns a random number that’s greater than or equal to 0 and less than 1. Think about how you can use this to conditionally return one of the multiple choices.
-Note: Some learners might think that arrays are necessary for this problem, but they aren’t. If you’re unfamiliar with arrays, don’t worry - they’ll be covered later in the curriculum.
-Test that your function returns what you expect using console.log or the browser developer tools before advancing to the next step.
+<p>Create a new function named getComputerChoice.</p>
+<p>Write the code so that getComputerChoice will randomly return one of the following string values: “rock”, “paper” or “scissors”.</p>
+<p>Hint: The Math.random method returns a random number that’s greater than or equal to 0 and less than 1. Think about how you can use this to conditionally return one of the multiple choices.</p>
+<p>Note: Some learners might think that arrays are necessary for this problem, but they aren’t. If you’re unfamiliar with arrays, don’t worry - they’ll be covered later in the curriculum.</p>
+<p>Test that your function returns what you expect using console.log or the browser developer tools before advancing to the next step.</p>
 
 <h2>Step 3: Write the logic to get the human choice</h2>
 Your game will be played by a human player. You will write a function that takes the user choice and returns it.
