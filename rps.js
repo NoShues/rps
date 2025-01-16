@@ -19,7 +19,7 @@ function getComputerChoice(max){
         computerChoice = 'Scissors';
         return computerChoice
 }
-console.log('getComputerChoice fx: ' + getComputerChoice(3));
+// console.log('getComputerChoice fx: ' + getComputerChoice(3));
 // *****************************************************************************************************//
     // SEQUENCE human choice
         // GET human choice
@@ -49,7 +49,7 @@ function getHumanChoice(){
         humanChoice = alert(`No ${userValue}'s allowed!`) + getHumanChoice(); 
     return String(humanChoice)
 }
-console.log('getHumanChoice fx: ' + getHumanChoice());
+// console.log('getHumanChoice fx: ' + getHumanChoice());
 // *****************************************************************************************************//
     // SEQUENCE declare scores
         // SET human score
@@ -66,7 +66,7 @@ console.log('Human Score: ' + humanScore + ' Computer Score: ' + computerScore)
             // IF human choice is equal to computer choice
                 // THEN Display: 'It's a Draw!'
             // IF human choice is equal to 'Rock' and computer choice is equal to 'Scissors'
-                // THEN Display: 'You win! Rock beats Paper'
+                // THEN Display: 'You win! Rock beats Scissors'
                 // INCREMENT human score by 1
             // IF human choice is equal to 'Paper' and computer choice is equal to 'Rock'
                 // THEN Display: 'You Win! Paper beats Rock'
@@ -85,6 +85,31 @@ console.log('Human Score: ' + humanScore + ' Computer Score: ' + computerScore)
                 // INCREMENT computer score by 1
             // ELSE
                 // Display: 'Oh, oh! Looks like something went wrong'
+// *****************************************************************************************************//
+function playRound (humanChoice, computerChoice){
+    if (humanChoice == computerChoice){
+        result = 'It is a draw!'
+    } else if (humanChoice == 'Rock' && computerChoice == 'Scissors'){
+        result = 'You Win! Rock beats Scissors'
+    } else if (humanChoice == 'Paper' && computerChoice == 'Rock'){
+        result = 'You Win! Paper beats Rock'
+    } else if (humanChoice == 'Scissors' && computerChoice == 'Paper'){
+        result = 'You Win! Scissors beats Paper'
+    } else if (humanChoice == 'Rock' && computerChoice == 'Paper'){
+        result = 'You lose! Paper beats Rock'
+    } else if (humanChoice == 'Paper' && computerChoice == 'Scissors'){
+        result = 'You lose! Scissors beats Paper'
+    } else if (humanChoice == 'Scissors' && computerChoice == 'Rock'){
+        result = 'You lose! Rock beats Scissors'
+    } else
+        result = 'Oh, oh! Looks like something went wrong!'
+        return result
+}
+const humanSelection = (getHumanChoice());
+const computerSelection = (getComputerChoice(3));
+console.log('You: ' + humanSelection)
+console.log('Computer: ' + computerSelection)
+console.log(playRound(humanSelection, computerSelection));
 // *****************************************************************************************************//
     // SEQUENCE play game
         // CALL play round 5 times
