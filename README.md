@@ -1,9 +1,9 @@
 # rps
-Rock Paper Scissors Game
+<h1>Rock Paper Scissors Game</h1>
 
 Remember to commit early and often! To refresh your memory, check out the commit messages lesson.
 
-<strong>#Step 1: Setup the project structure</strong>
+<h2>Step 1: Setup the project structure</h2>
 
 Create a new Git repository for your project.
 Create a blank HTML document with a script tag.
@@ -14,7 +14,7 @@ It’s best practice to link to an external JavaScript file inside this script t
 
 You don’t have to write additional code in the HTML file. This game is played entirely via the console.
 
-#Step 2: Write the logic to get the computer choice
+<h2>Step 2: Write the logic to get the computer choice</h2>
 Your game will be played against the computer. You will write a function that randomly returns “rock”, “paper” or “scissors”.
 
 Create a new function named getComputerChoice.
@@ -23,7 +23,7 @@ Hint: The Math.random method returns a random number that’s greater than or eq
 Note: Some learners might think that arrays are necessary for this problem, but they aren’t. If you’re unfamiliar with arrays, don’t worry - they’ll be covered later in the curriculum.
 Test that your function returns what you expect using console.log or the browser developer tools before advancing to the next step.
 
-#Step 3: Write the logic to get the human choice
+<h2>Step 3: Write the logic to get the human choice</h2>
 Your game will be played by a human player. You will write a function that takes the user choice and returns it.
 
 Create a new function named getHumanChoice.
@@ -31,13 +31,13 @@ Write the code so that getHumanChoice will return one of the valid choices depen
 Hint: Use the prompt method to get the user’s input.
 Test what your function returns by using console.log.
 
-#Step 4: Declare the players score variables
+<h2>Step 4: Declare the players score variables</h2>
 Your game will keep track of the players score. You will write variables to keep track of the players score.
 
 Create two new variables named humanScore and computerScore in the global scope.
 Initialize those variables with the value of 0.
 
-#Step 5: Write the logic to play a single round
+<h2>Step 5: Write the logic to play a single round</h2>
 Your game will be played round by round. You will write a function that takes the human and computer player choices as arguments, plays a single round, increments the round winner’s score and logs a winner announcement.
 
 Create a new function named playRound.
@@ -57,7 +57,7 @@ const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
 
-#Step 6: Write the logic to play the entire game
+<h2>Step 6: Write the logic to play the entire game</h2>
 Your game will play 5 rounds. You will write a function named playGame that calls playRound to play 5 rounds, keeps track of the scores and declares a winner at the end.
 
 Create a new function named playGame.
