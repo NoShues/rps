@@ -1,5 +1,5 @@
     // SEQUENCE computer choice
-        // COMPUTE a random number between 0 and 2 to be the computer choice
+        // COMPUTE random number between 0 and 3 to be the computer choice
             // SET computer choice
                 // IF-THEN-ELSE
                     // IF computer choice is equal to 0
@@ -8,6 +8,18 @@
                         // THEN Display: 'Paper'
                     // ELSE 
                         // Display: 'Scissors'
+// *****************************************************************************************************//
+function getComputerCoice(max){
+    let computerChoice = Math.floor(Math.random() * max);
+    if (computerChoice == 0){
+        computerChoice = 'Rock';
+    } else if (computerChoice == 1){
+        computerChoice = 'Paper';
+    } else
+        computerChoice = 'Scissors';
+        return computerChoice
+}
+console.log('getComputerChoice fx: ' + getComputerCoice(3));
 // *****************************************************************************************************//
     // SEQUENCE human choice
         // GET human choice
