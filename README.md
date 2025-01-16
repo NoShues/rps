@@ -56,7 +56,7 @@ function playRound(humanChoice, computerChoice) {
 <br>
 <p>const humanSelection = getHumanChoice();</p>
 const computerSelection = getComputerChoice();
-
+<br>
 <p>playRound(humanSelection, computerSelection);</p>
 
 <h2>Step 6: Write the logic to play the entire game</h2>
