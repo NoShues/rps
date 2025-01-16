@@ -57,6 +57,10 @@ console.log('getHumanChoice fx: ' + getHumanChoice());
         // SET computer score
             // INIT computer score to a value of 0
 // *****************************************************************************************************//
+let humanScore = 0;
+let computerScore = 0;
+console.log('Human Score: ' + humanScore + ' Computer Score: ' + computerScore)
+// *****************************************************************************************************//
     // SEQUENCE play round
         // GET human choice and computer choice
             // IF human choice is equal to computer choice
