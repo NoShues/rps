@@ -48,14 +48,17 @@ You don’t have to write additional code in the HTML file. This game is played 
 
 <h3>Example code:</h3>
 
-function playRound(humanChoice, computerChoice) {
+<p>function playRound(humanChoice, computerChoice) {</p>
+  <br>
   // your code here!
+  <br>
 }
-
-const humanSelection = getHumanChoice();
+<br>
+<p>const humanSelection = getHumanChoice();</p>
+<br>
 const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+<p>playRound(humanSelection, computerSelection);</p>
 
 <h2>Step 6: Write the logic to play the entire game</h2>
 <p>Your game will play 5 rounds. You will write a function named playGame that calls playRound to play 5 rounds, keeps track of the scores and declares a winner at the end.</p>
