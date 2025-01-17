@@ -57,9 +57,8 @@ function getHumanChoice(){
         // SET computer score
             // INIT computer score to a value of 0
 // *****************************************************************************************************//
-let humanScore = 0;
-let computerScore = 0;
-console.log('Human Score: ' + humanScore + ' Computer Score: ' + computerScore)
+let humanInitialScore = 0;
+let computerInitialScore = 0;
 // *****************************************************************************************************//
     // SEQUENCE play round
         // GET human choice and computer choice
@@ -90,25 +89,27 @@ function playRound (humanChoice, computerChoice){
     if (humanChoice == computerChoice){
         result = 'It is a draw!'
     } else if (humanChoice == 'Rock' && computerChoice == 'Scissors'){
-        result = 'You Win! Rock beats Scissors'
+        result = 'You Win! Rock beats Scissors', ++humanInitialScore
     } else if (humanChoice == 'Paper' && computerChoice == 'Rock'){
-        result = 'You Win! Paper beats Rock'
+        result = 'You Win! Paper beats Rock', ++humanInitialScore
     } else if (humanChoice == 'Scissors' && computerChoice == 'Paper'){
-        result = 'You Win! Scissors beats Paper'
+        result = 'You Win! Scissors beats Paper', ++humanInitialScore
     } else if (humanChoice == 'Rock' && computerChoice == 'Paper'){
-        result = 'You lose! Paper beats Rock'
+        result = 'You lose! Paper beats Rock', ++computerInitialScore
     } else if (humanChoice == 'Paper' && computerChoice == 'Scissors'){
-        result = 'You lose! Scissors beats Paper'
+        result = 'You lose! Scissors beats Paper', ++computerInitialScore
     } else if (humanChoice == 'Scissors' && computerChoice == 'Rock'){
-        result = 'You lose! Rock beats Scissors'
+        result = 'You lose! Rock beats Scissors', ++computerInitialScore
     } else
         result = 'Oh, oh! Looks like something went wrong!'
         return result
 }
 const humanSelection = (getHumanChoice());
 const computerSelection = (getComputerChoice(3));
-console.log('You: ' + humanSelection)
-console.log('Computer: ' + computerSelection)
+playRound(humanSelection, computerSelection);
+console.log('Human Score: ' + humanInitialScore + ' Computer Score: ' + computerInitialScore);
+console.log('You: ' + humanSelection);
+console.log('Computer: ' + computerSelection);
 console.log(playRound(humanSelection, computerSelection));
 // *****************************************************************************************************//
     // SEQUENCE play game
