@@ -84,8 +84,12 @@ let computerInitialScore = 0;
                 // INCREMENT computer score by 1
             // ELSE
                 // Display: 'Oh, oh! Looks like something went wrong'
+
+playGame();
 // *****************************************************************************************************//
-function playRound (humanChoice, computerChoice){
+function playRound (){
+    const humanChoice = getHumanChoice();
+    const computerChoice = getComputerChoice(3);
     if (humanChoice == computerChoice){
         result = 'It is a draw!'
     } else if (humanChoice == 'Rock' && computerChoice == 'Scissors'){
@@ -102,15 +106,8 @@ function playRound (humanChoice, computerChoice){
         result = 'You lose! Rock beats Scissors', ++computerInitialScore
     } else
         result = 'Oh, oh! Looks like something went wrong!'
-        return result
+        return result 
 }
-const humanSelection = (getHumanChoice());
-const computerSelection = (getComputerChoice(3));
-playRound(humanSelection, computerSelection);
-console.log('Human Score: ' + humanInitialScore + ' Computer Score: ' + computerInitialScore);
-console.log('You: ' + humanSelection);
-console.log('Computer: ' + computerSelection);
-console.log(playRound(humanSelection, computerSelection));
 // *****************************************************************************************************//
     // SEQUENCE play game
         // CALL play round 5 times
@@ -122,4 +119,36 @@ console.log(playRound(humanSelection, computerSelection));
                 // THEN Display: 'Unbelievable! It was a draw!'
             // ELSE
                 // Display: 'Uh, oh! Something went wrong'
+
 // *****************************************************************************************************//
+function playGame(){
+
+    playRound()
+    console.log('Human Score: ' + humanInitialScore + ' Computer Score: ' + computerInitialScore);
+    console.log(result);
+    playRound()
+    console.log('Human Score: ' + humanInitialScore + ' Computer Score: ' + computerInitialScore);
+    console.log(result);
+    playRound()
+    console.log('Human Score: ' + humanInitialScore + ' Computer Score: ' + computerInitialScore);
+    console.log(result);
+    playRound()
+    console.log('Human Score: ' + humanInitialScore + ' Computer Score: ' + computerInitialScore);
+    console.log(result);
+    playRound()
+    console.log('Human Score: ' + humanInitialScore + ' Computer Score: ' + computerInitialScore);
+    console.log(result);
+    if (humanInitialScore > computerInitialScore){
+        message = 'Congratulations: YOU WIN!'
+    } else if (humanInitialScore < computerInitialScore){
+        message = 'Better luck next time: YOU LOSE'
+    } else if (humanInitialScore === computerInitialScore){
+        message = 'Unbelievable! It was a draw!'
+    } else
+    message = 'Uh, oh! Something went wrong'
+
+    return message
+    
+}
+// *****************************************************************************************************//
+console.log(message)
