@@ -48,23 +48,22 @@ function getComputerChoice(max){
     return result 
 }
 
-function playGame(){
-    for (let i =0; i < 5; i++){
-        playRound()
-        console.log('Computer Choice: ' + getComputerChoice());
-        console.log(result);
-        console.log('Human Score: ' + humanInitialScore + ' Computer Score: ' + computerInitialScore);}
-    if (humanInitialScore > computerInitialScore){
-        message = '🎉Congratulations🎉 🏆 YOU WIN! 🏆'
-    } else if (humanInitialScore < computerInitialScore){
-        message = 'Better luck next time: YOU LOSE'
-    } else if (humanInitialScore == computerInitialScore){
-        message = 'Unbelievable! It was a draw!'
-    } else
-    message = 'Uh, oh! Something went wrong'
+// function playGame(){
+//     for (let i =0; i < 5; i++){
+//         playRound()
+//            console.log(result);
+//         console.log('Human Score: ' + humanInitialScore + ' Computer Score: ' + computerInitialScore);}
+//     if (humanInitialScore > computerInitialScore){
+//         message = '🎉Congratulations🎉 🏆 YOU WIN! 🏆'
+//     } else if (humanInitialScore < computerInitialScore){
+//         message = 'Better luck next time: YOU LOSE'
+//     } else if (humanInitialScore == computerInitialScore){
+//         message = 'Unbelievable! It was a draw!'
+//     } else
+//     message = 'Uh, oh! Something went wrong'
 
-    return message;
+//     return message;
     
-}
-playGame();
-console.log(message)
+// }
+// playGame();
+// console.log(message)
