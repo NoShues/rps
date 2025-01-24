@@ -1,4 +1,4 @@
-// buttons is a node list. It looks and acts much like an array.
+
 const buttons = document.querySelectorAll("button");
 
 // we use the .forEach method to iterate through each button
@@ -6,6 +6,7 @@ buttons.forEach((button) => {
   // and for each one we add a 'click' listener
   button.addEventListener("click", () => {
  playRound(button.id);
+ 
   });
 });
 
@@ -24,11 +25,22 @@ function getComputerChoice(max){
     
     let humanInitialScore = 0;
     let computerInitialScore = 0;
+    const computerSelection = document.querySelector('#playerSelection');
+    const contentComputerSelection= document.createElement('div');
+    const scores = document.querySelector('#playerSelection');
+    const contentScores = document.createElement('div');
+    const roundResult = document.querySelector('#playerSelection');
+    const contentRoundResult = document.createElement('div');
+    
     
     function playRound (humanChoice){
         const computerChoice = getComputerChoice(3);
+
+
+
         if (humanChoice == computerChoice){
             result = 'It is a draw!'
+
         } else if (humanChoice == 'Rock' && computerChoice == 'Scissors'){
             result = 'You Win! Rock beats Scissors', ++humanInitialScore
         } else if (humanChoice == 'Paper' && computerChoice == 'Rock'){
@@ -43,27 +55,36 @@ function getComputerChoice(max){
             result = 'You lose! Rock beats Scissors', ++computerInitialScore
         } else
         result = 'Oh, oh! Looks like something went wrong!'
-        return result, console.log(result), console.log('Human Score: ' + humanInitialScore + ' Computer Score: ' + computerInitialScore);
+        
+       return  contentRoundResult.textContent = result,
+        contentComputerSelection.textContent = 'Computer Choice: ' + computerChoice,
+        computerSelection.appendChild(contentComputerSelection),
+       
+        contentScores.textContent = 'Human Score: ' + humanInitialScore + ' Computer Score: ' + computerInitialScore,
+        scores.appendChild(contentScores),
+        
+       
+        contentRoundResult.textContent = result,
+        roundResult.appendChild(contentRoundResult),
+        score()
+  
+
+        // console.log('Human Score: ' + humanInitialScore + ' Computer Score: ' + computerInitialScore), 
+        // console.log('Computer Choice: ' + computerChoice), 
+        // console.log(score());
     }
-    console.log('Computer Choice: ' + getComputerChoice());
 
-// function playGame(){
-//     for (let i =0; i < 5; i++){
-//         playRound()
-//         console.log('Computer Choice: ' + getComputerChoice());
-//         console.log(result);
-//         console.log('Human Score: ' + humanInitialScore + ' Computer Score: ' + computerInitialScore);}
-//     if (humanInitialScore > computerInitialScore){
-//         message = '🎉Congratulations🎉 🏆 YOU WIN! 🏆'
-//     } else if (humanInitialScore < computerInitialScore){
-//         message = 'Better luck next time: YOU LOSE'
-//     } else if (humanInitialScore == computerInitialScore){
-//         message = 'Unbelievable! It was a draw!'
-//     } else
-//     message = 'Uh, oh! Something went wrong'
+function score(){
 
-//     return message;
+    if (humanInitialScore == 5){
+        message = alert('🎉Congratulations🎉 🏆 YOU WIN! 🏆');
+     
+    } else if (computerInitialScore == 5){
+        message = alert('Better luck next time: YOU LOSE');
     
-// }
-// playGame();
-// console.log(message)
+    } else
+        message = 'Keep Playing!'
+
+    return message
+    
+}
